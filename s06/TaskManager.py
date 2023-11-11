@@ -14,7 +14,7 @@ class TaskManager:
         task = {"Title": title, "Description": description, "completed": False}
 
         if not self.is_full():
-            if title not in [task['Title'] for task in self.stack]:
+            if title not in [t['Title'] for t in self.stack]:
                 self.top += 1
                 self.stack.append(task)
                 return f"{title} added to task"
