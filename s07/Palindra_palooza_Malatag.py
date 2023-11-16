@@ -54,9 +54,9 @@ class Stack:
             print(f"Reversed sentence: {reversed_sentence}")
 
         if cleaned_sentence == reversed_sentence:
-            print(f"Your sentence: {userInput}, is a palindrome")
+            print(f"Your sentence: {userInput} is a palindrome")
         else:
-            print(f"Your sentence: {userInput}, is not palindrome")
+            print(f"Your sentence: {userInput} is not palindrome")
 
 
     def sentence(self, string):
