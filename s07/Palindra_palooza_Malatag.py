@@ -45,7 +45,9 @@ class Stack:
 
             while temp:
                 cleaned_sentence = temp.data + cleaned_sentence
+                
                 temp = temp.next
+
             print(f"Cleaned sentence: {cleaned_sentence}")
             temp = self.top
             while temp:
@@ -60,12 +62,16 @@ class Stack:
 
 
     def sentence(self, string):
-        result = ""
-        for char in string:
-            if char.isalpha():
-                result += char.lower()
+        punc = '''!()-[]{};:'"\,<>./?@#$%^&*_~'''
+        string = string.lower()
+        string = string.strip()
+        string = string.replace(" ", "")
 
-        return result
+        for element in string:
+            if element in punc:
+                string = string.replace(element, "")
+
+        return string
 
 
 s = Stack()
